@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Prioritize - Analysen Übersicht</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #analysisList { list-style: none; padding: 0; }
+        #analysisList li { padding: 10px; border-bottom: 1px solid #ccc; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+<h1>Prioritize - Analysen Übersicht</h1>
+<button id="newAnalysisBtn">Neue Analyse erstellen</button>
+<ul id="analysisList"></ul>
+
+<!-- Modal für neue Analyse -->
+<div id="modal" style="display:none; position: fixed; top:20%; left:30%; background: #fff; border: 1px solid #ccc; padding:20px;">
+    <h2>Neue Analyse</h2>
+    <label>Titel: <input type="text" id="analysisTitle" /></label>
+    <br/><br/>
+    <button id="saveAnalysisBtn">Speichern</button>
+    <button id="cancelBtn">Abbrechen</button>
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>

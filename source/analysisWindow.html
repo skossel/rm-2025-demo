@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse bearbeiten</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #analysisTitle { font-size: 24px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ccc; }
+        th, td { padding: 8px; text-align: center; }
+        .variant-header { background-color: #f0f0f0; }
+        .criteria-column { background-color: #f9f9f9; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+<h1 id="analysisTitle">Analyse</h1>
+<div>
+    <button id="addVariantBtn">Variante hinzufügen</button>
+    <button id="addCriterionBtn">Kriterium hinzufügen</button>
+</div>
+<div id="analysisContainer">
+    <!-- Tabelle wird hier generiert -->
+</div>
+
+<!-- Modal für neue Variante -->
+<div id="variantModal" style="display:none; position: fixed; top:20%; left:30%; background: #fff; border: 1px solid #ccc; padding:20px;">
+    <h2>Neue Variante</h2>
+    <label>Name: <input type="text" id="variantName" /></label>
+    <br/><br/>
+    <button id="saveVariantBtn">Speichern</button>
+    <button id="cancelVariantBtn">Abbrechen</button>
+</div>
+
+<!-- Modal für neues Kriterium -->
+<div id="criterionModal" style="display:none; position: fixed; top:20%; left:30%; background: #fff; border: 1px solid #ccc; padding:20px;">
+    <h2>Neues Kriterium</h2>
+    <label>Name: <input type="text" id="criterionName" /></label>
+    <br/><br/>
+    <label>Typ:
+        <select id="criterionType">
+            <option value="Numerical">Numerical</option>
+            <option value="Ordinal">Ordinal</option>
+            <option value="Note">Note</option>
+        </select>
+    </label>
+    <br/><br/>
+    <label>Gewichtung: <input type="number" id="criterionWeight" min="0" max="10" /></label>
+    <br/><br/>
+    <button id="saveCriterionBtn">Speichern</button>
+    <button id="cancelCriterionBtn">Abbrechen</button>
+</div>
+
+<script src="analysisRenderer.js"></script>
+</body>
+</html>
